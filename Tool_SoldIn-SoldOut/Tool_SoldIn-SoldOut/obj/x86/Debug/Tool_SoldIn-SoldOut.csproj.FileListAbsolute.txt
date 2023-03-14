@@ -1,0 +1,9 @@
+F:\Project_Data\Tool_SoldIn-SoldOut\Tool_SoldIn-SoldOut\Tool_SoldIn-SoldOut\bin\x86\Debug\Tool_SoldIn-SoldOut.exe.config
+F:\Project_Data\Tool_SoldIn-SoldOut\Tool_SoldIn-SoldOut\Tool_SoldIn-SoldOut\bin\x86\Debug\Tool_SoldIn-SoldOut.exe
+F:\Project_Data\Tool_SoldIn-SoldOut\Tool_SoldIn-SoldOut\Tool_SoldIn-SoldOut\bin\x86\Debug\Tool_SoldIn-SoldOut.pdb
+F:\Project_Data\Tool_SoldIn-SoldOut\Tool_SoldIn-SoldOut\Tool_SoldIn-SoldOut\obj\x86\Debug\Tool_SoldIn_SoldOut.Form1.resources
+F:\Project_Data\Tool_SoldIn-SoldOut\Tool_SoldIn-SoldOut\Tool_SoldIn-SoldOut\obj\x86\Debug\Tool_SoldIn-SoldOut.csproj.GenerateResource.cache
+F:\Project_Data\Tool_SoldIn-SoldOut\Tool_SoldIn-SoldOut\Tool_SoldIn-SoldOut\obj\x86\Debug\Tool_SoldIn-SoldOut.csproj.CoreCompileInputs.cache
+F:\Project_Data\Tool_SoldIn-SoldOut\Tool_SoldIn-SoldOut\Tool_SoldIn-SoldOut\obj\x86\Debug\Tool_SoldIn-SoldOut.exe
+F:\Project_Data\Tool_SoldIn-SoldOut\Tool_SoldIn-SoldOut\Tool_SoldIn-SoldOut\obj\x86\Debug\Tool_SoldIn-SoldOut.pdb
+F:\Project_Data\Tool_SoldIn-SoldOut\Tool_SoldIn-SoldOut\Tool_SoldIn-SoldOut\obj\x86\Debug\Tool_SoldIn-SoldOut.csproj.AssemblyReference.cache
