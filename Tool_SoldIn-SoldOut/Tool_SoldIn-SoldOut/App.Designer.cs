@@ -100,6 +100,7 @@ namespace Tool_SoldIn_SoldOut
             this.dataGridView_product.RowTemplate.Height = 24;
             this.dataGridView_product.Size = new System.Drawing.Size(1189, 433);
             this.dataGridView_product.TabIndex = 4;
+            this.dataGridView_product.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_product_CellEndEdit);
             // 
             // prodId
             // 
@@ -129,7 +130,7 @@ namespace Tool_SoldIn_SoldOut
             // 
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
             this.currentInven.DefaultCellStyle = dataGridViewCellStyle1;
-            this.currentInven.HeaderText = "Tồn hiện tại";
+            this.currentInven.HeaderText = "System Units";
             this.currentInven.MinimumWidth = 6;
             this.currentInven.Name = "currentInven";
             this.currentInven.ReadOnly = true;
@@ -139,7 +140,7 @@ namespace Tool_SoldIn_SoldOut
             // 
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
             this.importNum.DefaultCellStyle = dataGridViewCellStyle2;
-            this.importNum.HeaderText = "Nhập thêm";
+            this.importNum.HeaderText = "Variance";
             this.importNum.MinimumWidth = 6;
             this.importNum.Name = "importNum";
             this.importNum.ReadOnly = true;
@@ -149,7 +150,7 @@ namespace Tool_SoldIn_SoldOut
             // 
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
             this.lastInven.DefaultCellStyle = dataGridViewCellStyle3;
-            this.lastInven.HeaderText = "Tồn cuối";
+            this.lastInven.HeaderText = "Current Units";
             this.lastInven.MinimumWidth = 6;
             this.lastInven.Name = "lastInven";
             this.lastInven.Width = 150;

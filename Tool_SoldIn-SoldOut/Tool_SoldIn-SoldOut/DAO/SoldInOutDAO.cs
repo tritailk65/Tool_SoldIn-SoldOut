@@ -45,9 +45,9 @@ namespace Tool_SoldIn_SoldOut.DAO
                                     SoldInOutNum INT IDENTITY PRIMARY KEY,
                                     ProdNum INT,
                                     ReportNo INT,
-                                    CurrentUnits INT,
-                                    VarianceUnits INT,
-                                    LastUnits INT
+                                    SystemUnits INT,
+                                    Variance INT,
+                                    CurrentUnits INT
                                 )";
                 DbConnect.getInstance().Open();
                 OdbcCommand cmd = new OdbcCommand(query, DbConnect.getInstance());
@@ -87,9 +87,9 @@ namespace Tool_SoldIn_SoldOut.DAO
                                    Name = dr["PROD_DESCRIPT"].ToString(),
                                    ReportCat = dr["CAT_DESCRIPT"].ToString(),
                                    ReportNo = reportNum,
-                                   CurrentUnits = Convert.ToInt32(dr["COUNTDOWN"]),
-                                   VarianceUnits = 0,
-                                   LastUnits = 0
+                                   SystemUnits = Convert.ToInt32(dr["COUNTDOWN"]),
+                                   Variance = 0,
+                                   CurrentUnits = 0
                                }).ToList();
                 
                 return productDTOs;
@@ -105,7 +105,7 @@ namespace Tool_SoldIn_SoldOut.DAO
         {
             try
             {
-                string query = @"INSERT INTO DBA.SOLDINOUT(ProdNum, ReportNo, CurrentUnits, VarianceUnits, LastUnits)
+                string query = @"INSERT INTO DBA.SOLDINOUT(ProdNum, ReportNo, SystemUnits, Variance, CurrentUnits)
                                 VALUES(?,?,?,?,?)";
                 DbConnect.getInstance().Open();
                 OdbcCommand cmd = new OdbcCommand(query, DbConnect.getInstance());
@@ -114,9 +114,9 @@ namespace Tool_SoldIn_SoldOut.DAO
                     cmd.Parameters.Clear();
                     cmd.Parameters.AddWithValue("@ProdNum", soldInOutDTOs[i].ProductID);
                     cmd.Parameters.AddWithValue("@ReportNo", soldInOutDTOs[i].ReportNo);
-                    cmd.Parameters.AddWithValue("@CurrentUnits", soldInOutDTOs[i].CurrentUnits);
-                    cmd.Parameters.AddWithValue("@VarianceUnits", soldInOutDTOs[i].VarianceUnits);
-                    cmd.Parameters.AddWithValue("@LastUnits", soldInOutDTOs[i].LastUnits);
+                    cmd.Parameters.AddWithValue("@CurrentUnits", soldInOutDTOs[i].SystemUnits);
+                    cmd.Parameters.AddWithValue("@VarianceUnits", soldInOutDTOs[i].Variance);
+                    cmd.Parameters.AddWithValue("@LastUnits", soldInOutDTOs[i].CurrentUnits);
                     cmd.ExecuteNonQuery();
                 }
                 return true;

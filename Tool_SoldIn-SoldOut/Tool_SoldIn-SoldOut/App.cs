@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Windows.Forms;
 using Tool_SoldIn_SoldOut.DTO;
 using Tool_SoldIn_SoldOut.DAO;
+using System.Drawing;
 
 namespace Tool_SoldIn_SoldOut
 {
@@ -59,9 +60,9 @@ namespace Tool_SoldIn_SoldOut
                     dataGridView_product.Rows.Add(productDTOs[i].ProductID, 
                                                   productDTOs[i].Name,
                                                   productDTOs[i].ReportCat,
-                                                  productDTOs[i].CurrentUnits,
-                                                  productDTOs[i].VarianceUnits,
-                                                  productDTOs[i].LastUnits);
+                                                  productDTOs[i].SystemUnits,
+                                                  productDTOs[i].Variance,
+                                                  productDTOs[i].CurrentUnits);
                 }
             }
         }
@@ -100,7 +101,7 @@ namespace Tool_SoldIn_SoldOut
                 }
                 if (FlagError)
                 {
-                    MessageBox.Show("Input is not valid", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Input is not valid", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 } 
                 else
                 {
@@ -124,6 +125,22 @@ namespace Tool_SoldIn_SoldOut
             {
                 //Do nothing
             }
+        }
+
+        private void dataGridView_product_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            bool Flag = true;
+            
+            if(!int.TryParse(dataGridView_product.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString(), out int rs))
+            {
+                Flag = false;
+                MessageBox.Show("Input is not valid", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            if (Flag)
+            {
+                dataGridView_product.Rows[e.RowIndex].Cells[e.ColumnIndex - 1].Value = Convert.ToInt32(dataGridView_product.Rows[e.RowIndex].Cells[e.ColumnIndex].Value) - Convert.ToInt32(dataGridView_product.Rows[e.RowIndex].Cells[e.ColumnIndex-2].Value);
+            }
+            
         }
     }
 }
