@@ -16,7 +16,7 @@ namespace Tool_SoldIn_SoldOut.DAO
         {
             try
             {
-                string queryStoreInfo = @"SELECT * FROM DBA.StoreInfo";
+                string queryStoreInfo = @"SELECT * FROM DBA.StoreInfo where IsActive = 1 AND SNUM <> 2047";
                 DbConnect.getInstance().Open();
 
                 OdbcCommand cmd = new OdbcCommand(queryStoreInfo, DbConnect.getInstance());

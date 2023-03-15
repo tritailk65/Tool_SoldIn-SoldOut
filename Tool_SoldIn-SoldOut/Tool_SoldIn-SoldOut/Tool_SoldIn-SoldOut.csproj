@@ -63,19 +63,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DAO\ProductDAO.cs" />
+    <Compile Include="DAO\SoldInOutDAO.cs" />
     <Compile Include="DTO\ComboboxValueDTO.cs" />
-    <Compile Include="DTO\ProductDTO.cs" />
+    <Compile Include="DTO\SoldInOutDTO.cs" />
     <Compile Include="Code\DbConnect.cs" />
     <Compile Include="DAO\ReportCatDAO.cs" />
     <Compile Include="DAO\StoreInfoDAO.cs" />
     <Compile Include="DTO\ReportCatDTO.cs" />
     <Compile Include="DTO\StoreInfoDTO.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="App.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="App.Designer.cs">
+      <DependentUpon>App.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -84,10 +84,9 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="Service\Confirm.cs" />
     <Compile Include="Code\Global.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="App.resx">
+      <DependentUpon>App.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

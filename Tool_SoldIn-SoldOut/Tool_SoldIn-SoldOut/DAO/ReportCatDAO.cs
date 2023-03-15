@@ -12,12 +12,11 @@ namespace Tool_SoldIn_SoldOut.DAO
 {
     public class ReportCatDAO
     {
-        public List<ReportCatDTO> GetReportCatBySNum(int snum)
+        public List<ReportCatDTO> GetReportCatBySNum()
         {
             try
             {
-                string queryStoreInfo = @"SELECT * FROM DBA.ReportCat
-                                        WHERE SNUM = "+snum;
+                string queryStoreInfo = @"SELECT * FROM DBA.REPORTCAT  where IsActive = 1 AND SNUM = 2047";
                 DbConnect.getInstance().Open();
 
                 OdbcCommand cmd = new OdbcCommand(queryStoreInfo, DbConnect.getInstance());
